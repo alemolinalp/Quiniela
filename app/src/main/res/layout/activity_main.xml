@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alexandramolina.quiniela.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="37dp">
+
+        <TextView
+            android:id="@+id/txt_ayuda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginTop="12dp"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:drawableLeft="@drawable/ayuda"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_marginBottom="34dp"
+            app:srcCompat="@drawable/letras" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="221dp"
+            app:srcCompat="@drawable/letras" />
+
+        <EditText
+            android:id="@+id/txt_usuario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView2"
+            android:layout_alignStart="@+id/txt_contrasena"
+            android:layout_weight="1"
+            android:background="#11000000"
+            android:drawableLeft="@drawable/usuario"
+            android:fontFamily="sans-serif"
+            android:hint="Usuario"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/txt_contrasena"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_weight="1"
+            android:background="#11000000"
+            android:drawableLeft="@drawable/contrasena"
+            android:fontFamily="sans-serif"
+            android:hint="Contraseña"
+            android:inputType="textPassword"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/btn_iniciarSesion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txt_contrasena"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="39dp"
+            android:layout_weight="1"
+            android:backgroundTint="@color/blue"
+            android:text="Iniciar Sesión"
+            android:textColor="@android:color/white"
+            android:textSize="16sp" />
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
