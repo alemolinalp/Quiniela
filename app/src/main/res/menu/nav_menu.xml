@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/usuario"
+        android:title="Usuario"
+        android:icon="@drawable/usuario">
+    </item>
+
+    <item android:id="@+id/quiniela"
+        android:title="Gestión de Quiniela"
+        android:icon="@drawable/usuario">
+    </item>
+
+    <item android:id="@+id/quinielas"
+        android:title="Mis Quinielas"
+        android:icon="@drawable/usuario">
+
+    </item>
+
+    <item android:id="@+id/calendario"
+        android:title="Calendario"
+        android:icon="@drawable/usuario">
+
+    </item>
+
+    <item android:id="@+id/info"
+        android:title="Información del Mundial"
+        android:icon="@drawable/usuario">
+
+    </item>
+
+    <item android:id="@+id/equipos"
+        android:title="Mis equipos"
+        android:icon="@drawable/usuario">
+
+    </item>
+
+
+    <item android:id="@+id/cerrarSesion"
+        android:title="Cerrar Sesión"
+        android:icon="@drawable/usuario">
+
+    </item>
+
+
+</menu>
