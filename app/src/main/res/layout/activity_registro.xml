@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alexandramolina.quiniela.RegistroActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="5dp">
+
+
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="45dp"/>
+
+            <EditText
+                android:id="@+id/txtUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Usuario"
+                android:textColor="@android:color/white"
+                android:inputType="textPersonName" />
+
+            <EditText
+                android:id="@+id/txtEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Email"
+                android:textColor="@android:color/white"
+                android:inputType="textEmailAddress" />
+
+            <EditText
+                android:id="@+id/txtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Contraseña"
+                android:textColor="@android:color/white"
+                android:inputType="textPassword" />
+
+            <EditText
+                android:id="@+id/txtConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:textColor="@android:color/white"
+                android:hint="Confirme Contraseña"
+                android:inputType="textPersonName" />
+
+            <Button
+                android:id="@+id/crearUsuario_button"
+                style="@style/Widget.AppCompat.Button"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="40dp"
+                android:background="#50000000"
+                android:text="Registrarse"
+                android:textColor="@android:color/white" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</android.support.constraint.ConstraintLayout>
