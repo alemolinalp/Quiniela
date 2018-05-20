@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Quiniela</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+
+
+
+    <string name="fusuario">Ingrese un nombre de usuario valido</string>
+    <string name="femail">Ingrese un correo electrónico valido</string>
+    <string name="fpassword">Ingrese una contraseña valida</string>
+    <string name="fConfirmpassword">Las contraseñas no coinciden</string>
+    <string name="title_activity_notas">NotasActivity</string>
 </resources>

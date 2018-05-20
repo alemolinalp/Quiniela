@@ -30,41 +30,56 @@
                 android:id="@+id/txtUsuario"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/letras"
                 android:ems="10"
+                android:paddingLeft="12dp"
+                android:layout_marginBottom="10dp"
                 android:hint="Usuario"
-                android:textColor="@android:color/white"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:textColorHint="@color/colorDarkgray"
+                android:textColor="@android:color/white" />
 
             <EditText
                 android:id="@+id/txtEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/letras"
                 android:ems="10"
+                android:paddingLeft="12dp"
+                android:layout_marginBottom="10dp"
                 android:hint="Email"
                 android:textColor="@android:color/white"
+                android:textColorHint="@color/colorDarkgray"
+
                 android:inputType="textEmailAddress" />
 
             <EditText
                 android:id="@+id/txtPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/letras"
                 android:ems="10"
+                android:paddingLeft="12dp"
+                android:layout_marginBottom="10dp"
                 android:hint="Contraseña"
                 android:textColor="@android:color/white"
+                android:textColorHint="@color/colorDarkgray"
                 android:inputType="textPassword" />
 
             <EditText
                 android:id="@+id/txtConfirmPassword"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/letras"
                 android:ems="10"
+                android:paddingLeft="12dp"
                 android:textColor="@android:color/white"
                 android:hint="Confirme Contraseña"
+                android:textColorHint="@color/colorDarkgray"
                 android:inputType="textPersonName" />
 
             <Button
                 android:id="@+id/crearUsuario_button"
-                style="@style/Widget.AppCompat.Button"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
