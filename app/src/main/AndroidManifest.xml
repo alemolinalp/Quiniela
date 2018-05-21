@@ -17,7 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistroActivity" />
-        <activity android:name=".PrincipalActivity"></activity>
+        <activity android:name=".PrincipalActivity" />
+        <activity android:name=".QuinielaFragment" />
+        <activity android:name=".CrearQuinielaFragment"></activity>
     </application>
 
 </manifest>

@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="160dp"
     android:orientation="vertical"
-    android:background="@drawable/fondo"
+    android:background="@drawable/fondo2"
     android:padding="15dp">
     <ImageView
         android:src="@drawable/usuario"
