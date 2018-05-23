@@ -13,11 +13,10 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.support.v7.widget.Toolbar;
+import android.widget.Toast;
 
 public class PrincipalActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
     ActionBar actionBar;
-    Toolbar toolbar;
     private DrawerLayout mDrawerLayout;
     private ActionBarDrawerToggle mToggle;
     SharedPreferences sharedPreferences;
@@ -28,8 +27,6 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
-
-        agregarToolbar();
 
         android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.container,new InicioFragment()).commit();
@@ -48,18 +45,6 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
         mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-
-    private void agregarToolbar() {
-        toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        final ActionBar ab = getSupportActionBar();
-        if (ab != null) {
-            //ab.setHomeAsUpIndicator(R.drawable.drawer_toggle);
-            ab.setDisplayHomeAsUpEnabled(true);
-        }
-
-    }
-
 
     private void setNavigationViewListener(){
         NavigationView navigationView = findViewById(R.id.navigation_view);
