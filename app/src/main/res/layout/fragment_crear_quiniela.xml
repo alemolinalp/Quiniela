@@ -5,18 +5,49 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/imagen_no_tarjeta"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center_horizontal"
-        android:src="@drawable/usuario" />
+        <EditText
+            android:id="@+id/nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Usuario"
+            android:inputType="textPersonName"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorDarkgray" />
 
-    <TextView
-        android:id="@+id/texto_no_tarjeta"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="hola hola hola"
-        android:textAppearance="?android:attr/textAppearanceSmall" />
+        <EditText
+            android:id="@+id/participantes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Número de participantes"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorDarkgray" />
+
+        <EditText
+            android:id="@+id/monto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Monto"
+            android:inputType="numberDecimal"
+            android:textColor="@android:color/white"
+            android:textColorHint="@color/colorDarkgray" />
+
+        <Button
+            android:id="@+id/obtener_codigo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#50000000"
+            android:text="Obtener código"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/codigo_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:text="Código: XML675" />
+
 </LinearLayout>
