@@ -17,7 +17,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegistroActivity" />
-        <activity android:name=".PrincipalActivity"></activity>
+        <activity android:name=".PrincipalActivity" />
+        <activity android:name=".UnirseQuinielaFragment" />
+        <activity android:name=".CrearQuinielaFragment" />
+        <activity android:name=".UsuarioActivity"></activity>
     </application>
 
 </manifest>
