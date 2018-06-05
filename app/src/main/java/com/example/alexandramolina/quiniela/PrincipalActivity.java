@@ -21,6 +21,7 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
     private ActionBarDrawerToggle mToggle;
     SharedPreferences sharedPreferences;
     NavigationView nv;
+    android.support.v4.app.FragmentManager fm;
 
 
     @Override
@@ -28,7 +29,7 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_principal);
 
-        android.support.v4.app.FragmentManager fm = getSupportFragmentManager();
+        fm = getSupportFragmentManager();
         fm.beginTransaction().replace(R.id.container,new InicioFragment()).commit();
 
         setNavigationViewListener();
@@ -62,6 +63,10 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
 
         switch(item.getItemId()){
+            case R.id.info:
+                fm.beginTransaction().replace(R.id.container,new GruposFragment()).commit();
+                break;
+
 
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);

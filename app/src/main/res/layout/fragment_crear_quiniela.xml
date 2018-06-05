@@ -3,7 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/fondo">
 
         <EditText
             android:id="@+id/nombre"
@@ -12,8 +13,10 @@
             android:ems="10"
             android:hint="Usuario"
             android:inputType="textPersonName"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/colorDarkgray" />
+            android:background="@drawable/letras"
+            android:paddingLeft="8dp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light"/>
 
         <EditText
             android:id="@+id/participantes"
@@ -21,9 +24,12 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="Número de participantes"
+            android:background="@drawable/letras"
             android:inputType="numberDecimal"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/colorDarkgray" />
+            android:layout_marginTop="5dp"
+            android:paddingLeft="8dp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light" />
 
         <EditText
             android:id="@+id/monto"
@@ -32,13 +38,17 @@
             android:ems="10"
             android:hint="Monto"
             android:inputType="numberDecimal"
-            android:textColor="@android:color/white"
-            android:textColorHint="@color/colorDarkgray" />
+            android:background="@drawable/letras"
+            android:layout_marginTop="5dp"
+            android:paddingLeft="8dp"
+            android:textColor="@android:color/background_light"
+            android:textColorHint="@android:color/background_light" />
 
         <Button
             android:id="@+id/obtener_codigo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
             android:background="#50000000"
             android:text="Obtener código"
             android:textColor="@android:color/white" />

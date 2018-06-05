@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="cabecera_tabla">
+        <item>Equipo</item>
+        <item>PJ</item>
+        <item>PG</item>
+        <item>PP</item>
+        <item>PE</item>
+        <item>GF</item>
+        <item>GC</item>
+        <item>PTS</item>
+    </string-array>
+</resources>
