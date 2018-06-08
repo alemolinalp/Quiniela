@@ -4,14 +4,14 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@drawable/fondo">
+    >
 
         <EditText
-            android:id="@+id/nombre"
+            android:id="@+id/nombreQuiniela"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Usuario"
+            android:hint="Nombre"
             android:inputType="textPersonName"
             android:background="@drawable/letras"
             android:paddingLeft="8dp"
@@ -45,7 +45,7 @@
             android:textColorHint="@android:color/background_light" />
 
         <Button
-            android:id="@+id/obtener_codigo"
+            android:id="@+id/crearQuiniela"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
@@ -57,7 +57,9 @@
             android:id="@+id/codigo_txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="end"
-            android:text="Código: XML675" />
+            android:textIsSelectable="true"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:text="Código: " />
 
 </LinearLayout>

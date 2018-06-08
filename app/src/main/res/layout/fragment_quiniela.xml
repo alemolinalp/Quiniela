@@ -3,23 +3,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    android:orientation="vertical"
-    android:background="@drawable/fondo">
+    android:orientation="vertical">
 
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/codigoQuiniela"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/letras"
         android:ems="10"
         android:hint="Ingrese el código"
-        android:background="@drawable/letras"
+        android:inputType="text"
         android:paddingLeft="8dp"
         android:textColor="@android:color/background_light"
         android:textColorHint="@android:color/background_light" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/unirse"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#50000000"

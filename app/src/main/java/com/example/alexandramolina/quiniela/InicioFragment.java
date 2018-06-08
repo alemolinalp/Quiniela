@@ -41,8 +41,8 @@ public class InicioFragment extends Fragment{
 
         View view = inflater.inflate(R.layout.fragment_inicio, container, false);
 
-            insertarTabs(container);
-            viewPager = view.findViewById(R.id.pager);
+        insertarTabs(container);
+        viewPager = view.findViewById(R.id.pager);
         poblarViewPager(viewPager);
         pestanas.setupWithViewPager(viewPager);
 

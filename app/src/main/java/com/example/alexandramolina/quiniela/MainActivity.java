@@ -58,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
         iniciarSesion();
 
     }
+    public void registro(View v){
+
+        Intent intent = new Intent(this, RegistroActivity.class);
+        startActivity(intent);
+    }
     public void iniciarSesion(){
 
         StringRequest loginRequest = new StringRequest(Request.Method.POST, "https://quinielaapp.herokuapp.com/v1/usuarios/login", new Response.Listener<String>() {
