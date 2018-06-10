@@ -38,6 +38,7 @@ public class CrearQuinielaFragment extends Fragment {
     SharedPreferences sharedPreferences;
     View v;
     String codigo=" ";
+    String id;
     public CrearQuinielaFragment(){
 
     }
@@ -76,7 +77,7 @@ public class CrearQuinielaFragment extends Fragment {
                 JSONObject json = null;
                 String name="";
                 codigo="";
-                String id="";
+                id="";
                 String status="";
                 String message="";
                 String authentication_token="";
@@ -138,6 +139,7 @@ public class CrearQuinielaFragment extends Fragment {
     public void abrirPrediccion(){
         Intent intent;
         intent = new Intent(getActivity(),PrediccionActivity.class);
+        intent.putExtra("idJuego", id);
         startActivity(intent);
     }
 

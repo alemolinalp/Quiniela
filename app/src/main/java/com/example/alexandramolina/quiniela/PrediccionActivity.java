@@ -34,6 +34,7 @@ public class PrediccionActivity extends AppCompatActivity {
     ArrayList<Partido> partidos;
     PartidoAdapter adapter;
     ListView lv;
+    String id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,7 @@ public class PrediccionActivity extends AppCompatActivity {
         setContentView(R.layout.activity_prediccion);
 
         lv= findViewById(R.id.lvPrediccion);
+        id= getIntent().getStringExtra("idJuego");
 
 
         partidos = new ArrayList<Partido>();
@@ -155,7 +157,7 @@ public class PrediccionActivity extends AppCompatActivity {
 
     public void guardarResultado(){
 
-        StringRequest registroRequest = new StringRequest(Request.Method.POST, "https://quinielaapp.herokuapp.com/v1/partidos", new Response.Listener<String>() {
+        StringRequest registroRequest = new StringRequest(Request.Method.POST, "https://quinielaapp.herokuapp.com/v1/resultados", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 JSONObject json = null;

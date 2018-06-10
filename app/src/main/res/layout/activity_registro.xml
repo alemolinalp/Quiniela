@@ -32,15 +32,19 @@
                 android:layout_height="wrap_content"
                 android:background="@drawable/letras"
                 android:ems="10"
-                android:paddingLeft="12dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_marginBottom="10dp"
                 android:hint="Usuario"
+                android:paddingLeft="12dp"
                 android:inputType="textPersonName"
                 android:textColorHint="@android:color/background_light"
                 android:textColor="@android:color/white" />
 
             <EditText
                 android:id="@+id/txtEmail"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/letras"
@@ -61,6 +65,8 @@
                 android:ems="10"
                 android:paddingLeft="12dp"
                 android:layout_marginBottom="10dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:hint="Contraseña"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/background_light"
@@ -75,6 +81,8 @@
                 android:hint="Confirme Contraseña"
                 android:inputType="textPassword"
                 android:paddingLeft="12dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
                 android:textColor="@android:color/white"
                 android:textColorHint="@android:color/background_light" />
 
