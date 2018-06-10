@@ -93,10 +93,11 @@ public class CrearQuinielaFragment extends Fragment {
                         id = main.getString("id");
                         authentication_token = json.getString("authentication_token");
                         Log.d("PRUEBA",authentication_token);
-                        Log.d("PRUEBA",codigo);
+                        Log.d("idJEUGo",id);
                         Log.d("PRUEBA",name);
                         sharedPreferences = v.getContext().getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
                         sharedPreferences.edit().putString("authentication_token", authentication_token).apply();
+                        sharedPreferences.edit().putString("idJuego",id).apply();
                         code.setText(codigo);
 
                     }
@@ -139,7 +140,11 @@ public class CrearQuinielaFragment extends Fragment {
     public void abrirPrediccion(){
         Intent intent;
         intent = new Intent(getActivity(),PrediccionActivity.class);
-        intent.putExtra("idJuego", id);
+        sharedPreferences = v.getContext().getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
+        String idJuego = sharedPreferences.getString("idJuego", "");
+
+        intent.putExtra("idJuego", idJuego);
+        Log.d("IIID",idJuego);
         startActivity(intent);
     }
 

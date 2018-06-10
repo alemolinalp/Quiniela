@@ -65,7 +65,7 @@ public class RegistroActivity extends AppCompatActivity {
 
 
             registro();
-            //abrirActivityPrincipal();
+            abrirActivityPrincipal();
             Toast.makeText(RegistroActivity.this, "Data received Succesfully", Toast.LENGTH_SHORT);
         }
         else{

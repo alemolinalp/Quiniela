@@ -1,6 +1,7 @@
 package com.example.alexandramolina.quiniela;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -34,7 +35,10 @@ public class PrediccionActivity extends AppCompatActivity {
     ArrayList<Partido> partidos;
     PartidoAdapter adapter;
     ListView lv;
-    String id;
+    String id="";
+    SharedPreferences sharedPreferences;
+    String posicion="";
+    String prediccion="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,47 +49,10 @@ public class PrediccionActivity extends AppCompatActivity {
         id= getIntent().getStringExtra("idJuego");
 
 
+
         partidos = new ArrayList<Partido>();
         adapter= new PartidoAdapter(getApplicationContext(),R.layout.partido_item,partidos);
         obtenerPartidos();
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                Log.d("Prueba","holaa");
-                String resultado;
-                Spinner spinner;
-
-
-                for (int j = 0; j < 48; i++)
-                {
-
-                    spinner =  view.findViewById(R.id.spinner);
-                    resultado= spinner.getSelectedItem().toString();
-                    Log.d("Prueba",resultado);
-                }
-            }
-        });
-
-        lv.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View view) {
-
-                String resultado;
-                Spinner spinner;
-
-
-                for (int i = 0; i < 48; i++)
-                {
-
-                    spinner =  view.findViewById(R.id.spinner);
-                    resultado= spinner.getSelectedItem().toString();
-                    Log.d("Prueba",resultado);
-                }
-
-                return true;
-            }
-        });
-
 
 
     }
@@ -93,9 +60,14 @@ public class PrediccionActivity extends AppCompatActivity {
 
     public void btnGuardar(View v){
 
-
+        int n= 1;
         for(Partido p:partidos){
-            Log.d("PRUEBA",p.getResultado());
+            posicion=Integer.toString(n);
+            prediccion=p.getResultado();
+            guardarResultado(posicion,prediccion);
+            //Log.d("PRUEBA",p.getResultado());
+            n++;
+
         }
 
     }
@@ -155,7 +127,7 @@ public class PrediccionActivity extends AppCompatActivity {
     }
 
 
-    public void guardarResultado(){
+    public void guardarResultado(final String p,final String pre){
 
         StringRequest registroRequest = new StringRequest(Request.Method.POST, "https://quinielaapp.herokuapp.com/v1/resultados", new Response.Listener<String>() {
             @Override
@@ -169,16 +141,8 @@ public class PrediccionActivity extends AppCompatActivity {
                     status=json.getString("status");
                     message=json.getString("message");
                     Log.d("RESPONSE",response);
-                    int id1,id2;
                     if(status.equals("Success")){
-                        JSONArray jsonArray = new JSONArray(json.getString("data"));
-                        for (int i = 0; i < jsonArray.length(); i++) {
-                            JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-                            id1 = Integer.parseInt(jsonObject1.getString("equipo1"));
-                            id2 = Integer.parseInt(jsonObject1.getString("equipo2"));
-                            partidos.add(new Partido(id1, id2));
-                        }
-                        lv.setAdapter(adapter);
+                        JSONObject main = new JSONObject(json.getString("data"));
 
 
                     }
@@ -200,6 +164,20 @@ public class PrediccionActivity extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
+
+                sharedPreferences = getApplicationContext().getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
+                String user_id = sharedPreferences.getString("id", "");
+
+                Log.d("PARAM",user_id);
+                Log.d("PARAM",posicion);
+                Log.d("PARAM",id);
+                Log.d("PARAM",prediccion);
+
+                params.put("idUsuario",user_id);
+                params.put("idPartido", p);
+                params.put("idJuego", id);
+                params.put("prediccion",pre);
+
 
                 return params;
             }

@@ -18,7 +18,7 @@ public class Partido {
     public Partido(int idEquipo1, int idEquipo2) {
         this.idEquipo1 = idEquipo1;
         this.idEquipo2 = idEquipo2;
-        resultado="0";
+        resultado="1";
     }
 
     public int getIdEquipo1() {
