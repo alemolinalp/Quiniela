@@ -2,42 +2,42 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:id="@+id/usuario"
         android:title="Usuario"
-        android:icon="@drawable/usuario">
+        android:icon="@drawable/android">
     </item>
 
     <item android:id="@+id/quiniela"
         android:title="Gestión de Quiniela"
-        android:icon="@drawable/usuario">
+        android:icon="@drawable/gestionar">
     </item>
 
     <item android:id="@+id/quinielas"
         android:title="Mis Quinielas"
-        android:icon="@drawable/usuario">
+        android:icon="@drawable/quinielas">
 
     </item>
 
     <item android:id="@+id/calendario"
         android:title="Calendario"
-        android:icon="@drawable/usuario">
+        android:icon="@drawable/calendario">
 
     </item>
 
     <item android:id="@+id/info"
         android:title="Información del Mundial"
-        android:icon="@drawable/usuario">
+        android:icon="@drawable/info">
 
     </item>
 
     <item android:id="@+id/equipos"
         android:title="Mis equipos"
-        android:icon="@drawable/usuario">
+        android:icon="@drawable/bola">
 
     </item>
 
 
     <item android:id="@+id/cerrarSesion"
         android:title="Cerrar Sesión"
-        android:icon="@drawable/usuario">
+        android:icon="@drawable/cerrarsesion">
 
     </item>
 

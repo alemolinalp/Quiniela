@@ -7,6 +7,9 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
+    <string name="facebook_app_id">794105657465824</string>
+    <string name="facebook_login_protocol_scheme">fb794105657465824</string>
+
 
     <string name="fusuario">Ingrese un nombre de usuario valido</string>
     <string name="femail">Ingrese un correo electrónico valido</string>
