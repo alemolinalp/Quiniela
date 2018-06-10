@@ -1,6 +1,7 @@
 package com.example.alexandramolina.quiniela;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.net.Uri;
@@ -56,6 +57,7 @@ public class UnirseQuinielaFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 añadirParticipante();
+                abrirPrediccion();
             }
         });
 
@@ -121,6 +123,11 @@ public class UnirseQuinielaFragment extends Fragment {
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         requestQueue.add(registroRequest);
 
+    }
+    public void abrirPrediccion(){
+        Intent intent;
+        intent = new Intent(getActivity(),PrediccionActivity.class);
+        startActivity(intent);
     }
 
 

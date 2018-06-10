@@ -1,6 +1,7 @@
 package com.example.alexandramolina.quiniela;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -13,6 +14,8 @@ import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class PrincipalActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -34,6 +37,8 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
 
         setNavigationViewListener();
         nv=findViewById(R.id.navigation_view);
+
+        setHeader();
 
 
 
@@ -66,6 +71,20 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
             case R.id.info:
                 fm.beginTransaction().replace(R.id.container,new GruposFragment()).commit();
                 break;
+            case R.id.usuario:
+                fm.beginTransaction().replace(R.id.container, new UsuarioFragment()).commit();
+                break;
+            case R.id.cerrarSesion:
+                sharedPreferences = getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
+                sharedPreferences.edit().putString("authentication_token", "").apply();
+                sharedPreferences.edit().putString("id", "").apply();
+                sharedPreferences.edit().putString("email", "").apply();
+                sharedPreferences.edit().putString("name", "").apply();
+                abrirMainActivity();
+                break;
+            case R.id.quiniela:
+                fm.beginTransaction().replace(R.id.container,new InicioFragment()).commit();
+                break;
 
 
         }
@@ -73,4 +92,23 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
         return false;
     }
 
+    public void abrirMainActivity(){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onBackPressed() {
+
+    }
+    private void setHeader(){
+        sharedPreferences = getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
+        String email = sharedPreferences.getString("email", "");
+        String name = sharedPreferences.getString("name", "");
+        View header = nv.getHeaderView(0);
+        TextView headerEmail =  header.findViewById(R.id.headerEmail);
+        TextView headerName =  header.findViewById(R.id.headerName);
+        headerEmail.setText(email);
+        headerName.setText(name);
+    }
 }

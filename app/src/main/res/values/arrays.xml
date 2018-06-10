@@ -11,4 +11,42 @@
         <item>GC</item>
         <item>PTS</item>
     </string-array>
+
+    <array name="banderas">
+        <item>@drawable/rus</item>
+        <item>@drawable/ksa</item>
+        <item>@drawable/egy</item>
+        <item>@drawable/uru</item>
+        <item>@drawable/por</item>
+        <item>@drawable/esp</item>
+        <item>@drawable/mar</item>
+        <item>@drawable/irn</item>
+        <item>@drawable/fra</item>
+        <item>@drawable/aus</item>
+        <item>@drawable/per</item>
+        <item>@drawable/den</item>
+        <item>@drawable/arg</item>
+        <item>@drawable/isl</item>
+        <item>@drawable/cro</item>
+        <item>@drawable/nga</item>
+        <item>@drawable/bra</item>
+        <item>@drawable/sui</item>
+        <item>@drawable/crc</item>
+        <item>@drawable/srb</item>
+        <item>@drawable/ger</item>
+        <item>@drawable/mex</item>
+        <item>@drawable/swe</item>
+        <item>@drawable/kor</item>
+        <item>@drawable/bel</item>
+        <item>@drawable/pan</item>
+        <item>@drawable/tun</item>
+        <item>@drawable/eng</item>
+        <item>@drawable/pol</item>
+        <item>@drawable/sen</item>
+        <item>@drawable/col</item>
+        <item>@drawable/jpn</item>
+
+
+
+    </array>
 </resources>
