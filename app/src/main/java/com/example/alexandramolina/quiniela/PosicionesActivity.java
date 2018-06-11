@@ -68,9 +68,11 @@ public class PosicionesActivity extends AppCompatActivity {
                     String id,acierto,authentication_token;
                     if(status.equals("Success")){
                         JSONArray jsonArray = new JSONArray(json.getString("data"));
+                        JSONArray usu = new JSONArray(json.getString("usuarios"));
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject jsonObject1 = jsonArray.getJSONObject(i);
-                            id = jsonObject1.getString("idUsuario");
+                            JSONObject jsonObject = usu.getJSONArray(i).getJSONObject(0);
+                            id = jsonObject.getString("nombre");
                             acierto = jsonObject1.getString("aciertos");
                             posiciones.add(new Posicion(id,acierto));
                         }

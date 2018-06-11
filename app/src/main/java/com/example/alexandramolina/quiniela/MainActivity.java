@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void fb(){
 
-        StringRequest loginRequest = new StringRequest(Request.Method.POST, "https://celytranslate.herokuapp.com/v1/usuarios/fb", new Response.Listener<String>() {
+        StringRequest loginRequest = new StringRequest(Request.Method.POST, "https://quinielaapp.herokuapp.com/v1/usuarios/fb", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 JSONObject json = null;
