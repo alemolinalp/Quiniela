@@ -32,6 +32,8 @@
         <activity android:name=".GrupoActivity" />
         <activity android:name=".PrediccionActivity" />
         <activity android:name=".AyudaActivity"></activity>
+        <activity android:name=".QuinielaActivity" />
+        <activity android:name=".PosicionesActivity"></activity>
     </application>
 
 </manifest>

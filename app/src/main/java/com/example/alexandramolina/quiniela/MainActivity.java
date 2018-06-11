@@ -219,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void fb(){
 
-        StringRequest loginRequest = new StringRequest(Request.Method.POST, "https://celytranslate.herokuapp.com/v1/sessions/fb", new Response.Listener<String>() {
+        StringRequest loginRequest = new StringRequest(Request.Method.POST, "https://celytranslate.herokuapp.com/v1/usuarios/fb", new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 JSONObject json = null;
@@ -235,7 +235,7 @@ public class MainActivity extends AppCompatActivity {
                     message=json.getString("message");
                     if(status.equals("Success")){
                         JSONObject main = new JSONObject(json.getString("data"));
-                        name = main.getString("name");
+                        name = main.getString("nombre");
                         email = main.getString("email");
                         id = main.getString("id");
                         authentication_token = main.getString("authentication_token");
@@ -266,8 +266,7 @@ public class MainActivity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
                 params.put("email",email);
-                params.put("password","123456");
-                params.put("name",usuario);
+                params.put("nombre",usuario);
 
                 return params;
             }

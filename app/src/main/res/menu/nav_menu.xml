@@ -29,7 +29,13 @@
     </item>
 
     <item android:id="@+id/equipos"
-        android:title="Mis equipos"
+        android:title="Mi equipo"
+        android:icon="@drawable/bola">
+
+    </item>
+
+    <item android:id="@+id/infoRus"
+        android:title="Información Rusia"
         android:icon="@drawable/bola">
 
     </item>

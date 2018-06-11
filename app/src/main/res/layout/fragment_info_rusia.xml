@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".InfoRusiaFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/fondo">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp">
+
+            <TextView
+                android:id="@+id/Rusianombre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre:"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/Rusiacodigo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Código:"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/Rusianativo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre Nativo:"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/Rusiaregion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Región:"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/Rusiasubregion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sub Región:"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"/>
+
+            <TextView
+                android:id="@+id/Rusiaarea"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Área:"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/Rusiamoneda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Moneda:"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"/>
+            <TextView
+                android:id="@+id/Rusiasimbolomoneda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Simbolo Moneda:"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                android:textColor="@color/white"
+                android:gravity="center_horizontal"/>
+        </LinearLayout>
+    </RelativeLayout>
+</FrameLayout>

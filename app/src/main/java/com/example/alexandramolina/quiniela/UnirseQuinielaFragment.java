@@ -82,11 +82,12 @@ public class UnirseQuinielaFragment extends Fragment {
                     Log.d("RESPONSE",response);
                     if(status.equals("Success")){
                         JSONObject main = new JSONObject(json.getString("data"));
-                        id = main.getString("id");
-                        //authentication_token = json.getString("authentication_token");
+                        id = main.getString("idJuego");
+                        authentication_token = json.getString("authentication_token");
                         Log.d("PRUEBA",id);
                         sharedPreferences = v.getContext().getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
-                        //sharedPreferences.edit().putString("authentication_token", authentication_token).apply();
+                        sharedPreferences.edit().putString("authentication_token", authentication_token).apply();
+                        sharedPreferences.edit().putString("idJuego",id).apply();
 
 
                     }
@@ -127,6 +128,10 @@ public class UnirseQuinielaFragment extends Fragment {
     public void abrirPrediccion(){
         Intent intent;
         intent = new Intent(getActivity(),PrediccionActivity.class);
+        sharedPreferences = v.getContext().getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
+        String idJuego = sharedPreferences.getString("idJuego", "");
+
+        intent.putExtra("idJuego", idJuego);
         startActivity(intent);
     }
 
