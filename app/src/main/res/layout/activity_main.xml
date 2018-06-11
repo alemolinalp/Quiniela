@@ -26,10 +26,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentTop="true"
+                android:layout_gravity="end"
                 android:clickable="true"
                 android:drawableLeft="@drawable/ayuda"
-                android:layout_gravity="end"
                 android:fontFamily="sans-serif"
+                android:onClick="abrirAyudaActivity"
                 android:textSize="18sp" />
 
             <ImageView

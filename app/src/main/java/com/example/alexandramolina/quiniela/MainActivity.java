@@ -277,5 +277,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void abrirAyudaActivity(View v){
+        Intent intent = new Intent(this, AyudaActivity.class);
+        startActivity(intent);
+    }
+
 
 }

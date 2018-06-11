@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alexandramolina.quiniela.AyudaActivity"
+    android:background="@drawable/fondo">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_thin"
+            android:text="Ayuda"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="30sp"
+            android:textStyle="normal|bold" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Para empezar a utilizar la aplicación debe registrarse con facebook o mediante un correo electrónico. Al estar registrado a la aplicación podrá crear una quiniela o unirse a otra mediante un código que será dado al creador de la quiniela. También, podrá seguir a su equipo favorito para estar al tanto de todas las noticias del mismo y ver toda la información sobre los partidos del mundial. Al estar unido a una quiniela usted podrá predecir los resultados de los partidos de la fase de grupos indicando cual equipo gana o si empatan. Al inicio de cada quiniela se cobrará un monto que será el premio para el jugador que acierte más resultados. Reúne amigos y demuestra quien tiene las mejores predicciones."
+            android:textColor="@color/cardview_light_background" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Acerca de"
+            android:textAlignment="center"
+            android:textColor="@color/cardview_light_background"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="La siguiente aplicación es una quiniela virtual para la predicción de los resultados de la fase de grupo del mundial de fútbol 2018 en Rusia. Creada por Alexandra Molina y Andrés Sancho para el curso de Desarrollo de Aplicaciones para Dispositivos Móviles del Instituto Tecnológico de Costa Rica, 2018.  "
+            android:textAlignment="viewStart"
+            android:textColor="@color/cardview_light_background" />
+    </LinearLayout>
+
+</RelativeLayout>
