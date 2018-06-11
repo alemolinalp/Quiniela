@@ -74,7 +74,7 @@ public class InfoRusiaFragment extends Fragment {
                 try {
                     json = new JSONObject(response);
                     JSONArray array= json.getJSONArray("Response");
-                    JSONObject jason= array.getJSONObject(0);
+                    JSONObject jason= array.getJSONObject(183);
                     String nom= jason.getString("Name");
                     String code= jason.getString("Alpha3Code");
                     String nat= jason.getString("NativeName");
@@ -91,7 +91,7 @@ public class InfoRusiaFragment extends Fragment {
                     subregion.setText("Sub Region: "+ sub);
                     area.setText("Area: " + a);
                     moneda.setText("Moneda: " + mon);
-                    simbolo.setText("Símbolo Moneda: "+ simbolo);
+                    simbolo.setText("Símbolo Moneda: "+ sym);
 
                 } catch (JSONException e) {
                     e.printStackTrace();
@@ -107,7 +107,7 @@ public class InfoRusiaFragment extends Fragment {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("pName","Russia");
+                params.put("pName","Costa Rica");
 
                 return params;
             }
