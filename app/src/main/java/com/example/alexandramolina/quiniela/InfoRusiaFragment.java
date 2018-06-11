@@ -60,6 +60,7 @@ public class InfoRusiaFragment extends Fragment {
 
 
 
+
         return v;
     }
 
@@ -111,7 +112,7 @@ public class InfoRusiaFragment extends Fragment {
                 return params;
             }
         };
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         requestQueue.add(loginRequest);
 
     }
