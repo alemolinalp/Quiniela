@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <TextView
+            android:id="@+id/nomQuiniela"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:text="Quniela"
+            android:textColor="@color/white"
+            android:layout_marginBottom="15sp"/>
+
+        <TextView
+            android:id="@+id/codigoQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Código de invitación: 5iyyX"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5sp"/>
+
+        <TextView
+            android:id="@+id/participantesQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="100 participantes"
+            android:textColor="@color/white"
+            android:layout_marginBottom="5sp"/>
+
+        <TextView
+            android:id="@+id/montoQ"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:text="10000 colones" />
+    </LinearLayout>
+</LinearLayout>

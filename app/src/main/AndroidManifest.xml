@@ -23,7 +23,9 @@
         <activity android:name=".UnirseQuinielaFragment" />
         <activity android:name=".CrearQuinielaFragment" />
         <activity android:name=".GrupoActivity" />
-        <activity android:name=".PrediccionActivity"></activity>
+        <activity android:name=".PrediccionActivity" />
+        <activity android:name=".QuinielaActivity" />
+        <activity android:name=".PosicionesActivity"></activity>
     </application>
 
 </manifest>

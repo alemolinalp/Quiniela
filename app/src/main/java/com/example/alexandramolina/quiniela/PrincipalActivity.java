@@ -85,6 +85,9 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
             case R.id.quiniela:
                 fm.beginTransaction().replace(R.id.container,new InicioFragment()).commit();
                 break;
+            case R.id.quinielas:
+                fm.beginTransaction().replace(R.id.container,new MisQuinielasFragment()).commit();
+                break;
 
 
         }

@@ -138,6 +138,9 @@ public class CrearQuinielaFragment extends Fragment {
     }
 
     public void abrirPrediccion(){
+        nombre.setText("");
+        monto.setText("");
+        participantes.setText("");
         Intent intent;
         intent = new Intent(getActivity(),PrediccionActivity.class);
         sharedPreferences = v.getContext().getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
