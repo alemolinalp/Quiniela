@@ -126,7 +126,7 @@ public class PosicionesActivity extends AppCompatActivity {
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Toast.makeText(getApplicationContext(), "Error", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), error.toString(), Toast.LENGTH_SHORT).show();
             }
         }){
             @Override
@@ -137,6 +137,7 @@ public class PosicionesActivity extends AppCompatActivity {
                 String user_id = sharedPreferences.getString("id", "");
                 String idJuego = sharedPreferences.getString("idJuego", "");
                 String authentication_token = sharedPreferences.getString("authentication_token", "");
+                Log.d("SE CAE",idJuego);
 
                 params.put("idUsuario",user_id);
                 params.put("authentication_token",authentication_token);

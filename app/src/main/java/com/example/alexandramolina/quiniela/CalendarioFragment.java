@@ -9,6 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
+import android.widget.RadioButton;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -41,6 +42,7 @@ public class CalendarioFragment extends Fragment {
     ListView lv;
     String id="";
     SharedPreferences sharedPreferences;
+    RadioButton lugar,goles;
 
 
     public CalendarioFragment() {
@@ -55,7 +57,27 @@ public class CalendarioFragment extends Fragment {
         View v =inflater.inflate(R.layout.fragment_calendario, container, false);
 
         lv= v.findViewById(R.id.listCalendario);
+        lugar=v.findViewById(R.id.radioLugar);
+        goles=v.findViewById(R.id.radioGoles);
+
+        lugar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                adapter.ordenarLugar();
+                Log.d("Hola","soy el buttonlugar" );
+            }
+        });
+
+        goles.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                adapter.ordenarGoles();
+                Log.d("Hola","soy el buttongoles");
+            }
+        });
+
         partidos = new ArrayList<Partido>();
+
         adapter= new CalendarioAdapter(getContext(),R.layout.calendario_item,partidos);
         obtenerPartidos();
 

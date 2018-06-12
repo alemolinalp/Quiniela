@@ -87,5 +87,13 @@ public class Partido {
     public void setResultado(String resultado) {
         this.resultado = resultado;
     }
+
+    public String getTotal(){
+        int total1=0;
+        total1 += Integer.parseInt(getGolesequipo1());
+        total1 += Integer.parseInt(getGetGolesequipo2());
+
+        return Integer.toString(total1);
+    }
 }
 

@@ -15,6 +15,7 @@ import android.widget.Spinner;
 
 import com.example.alexandramolina.quiniela.R;
 import com.example.alexandramolina.quiniela.clases.Partido;
+import com.example.alexandramolina.quiniela.clases.Posicion;
 
 import java.util.ArrayList;
 
@@ -30,10 +31,12 @@ public class PartidoAdapter extends BaseAdapter {
     private LayoutInflater inflater;
 
 
+
     public PartidoAdapter(Context context, int layout, ArrayList<Partido> arrayList) {
         this.context = context;
         this.layout = layout;
         this.arrayList = arrayList;
+
         inflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
