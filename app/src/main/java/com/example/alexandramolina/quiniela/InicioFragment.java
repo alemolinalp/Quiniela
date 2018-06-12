@@ -48,16 +48,19 @@ public class InicioFragment extends Fragment{
 
 
 
+
         return view;
     }
 
     private void insertarTabs(ViewGroup container) {
         View padre = (View) container.getParent();
         appBar = padre.findViewById(R.id.appbar);
+        appBar.removeAllViews();
         pestanas = new TabLayout(getActivity());
         pestanas.setTabTextColors(Color.parseColor("#FFFFFF"), Color.parseColor("#FFFFFF"));
 
         appBar.addView(pestanas);
+
     }
 
     private void poblarViewPager(ViewPager viewPager) {

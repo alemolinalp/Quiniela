@@ -21,12 +21,16 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.basgeekball.awesomevalidation.AwesomeValidation;
 import com.basgeekball.awesomevalidation.ValidationStyle;
+import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.SignUpEvent;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import io.fabric.sdk.android.Fabric;
 
 public class RegistroActivity extends AppCompatActivity {
 
@@ -39,6 +43,8 @@ public class RegistroActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registro);
+
+        Fabric.with(this, new Answers());
 
 
         awesomeValidation = new AwesomeValidation(ValidationStyle.BASIC);
@@ -65,6 +71,9 @@ public class RegistroActivity extends AppCompatActivity {
 
 
             registro();
+            Answers.getInstance().logSignUp(new SignUpEvent()
+                    .putMethod("Digits")
+                    .putSuccess(true));
             abrirActivityPrincipal();
             Toast.makeText(RegistroActivity.this, "Data received Succesfully", Toast.LENGTH_SHORT);
         }

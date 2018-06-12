@@ -19,6 +19,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.crashlytics.android.answers.CustomEvent;
+import com.crashlytics.android.answers.LoginEvent;
 import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
@@ -36,6 +38,9 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+
+import com.crashlytics.android.answers.Answers;
+import io.fabric.sdk.android.Fabric;
 
 public class MainActivity extends AppCompatActivity {
     String usuario;
@@ -61,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Fabric.with(this, new Answers());
 
         sharedPreferences = getSharedPreferences("com.example.alexandramolina.quiniela", Context.MODE_PRIVATE);
         String id = sharedPreferences.getString("id", "");
@@ -143,6 +149,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void iniciarSesion(View v){
+
+        Answers.getInstance().logLogin(new LoginEvent()
+                .putMethod("Digits")
+                .putSuccess(true));
+
 
         usuario=  txtUsuario.getText().toString();
         password= txtContrasena.getText().toString();
