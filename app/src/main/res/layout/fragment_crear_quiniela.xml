@@ -34,7 +34,6 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:fontFamily="sans-serif"
-            android:paddingLeft="5dp"
             android:textColor="@android:color/background_light"
             android:textColorHint="@android:color/background_light" />
 

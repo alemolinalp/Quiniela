@@ -23,6 +23,18 @@
         <item>3</item>
     </string-array>
 
+    <string-array name="grupo_array">
+        <item>Grupo A</item>
+        <item>Grupo B</item>
+        <item>Grupo C</item>
+        <item>Grupo D</item>
+        <item>Grupo E</item>
+        <item>Grupo F</item>
+        <item>Grupo G</item>
+        <item>Grupo H</item>
+    </string-array>
+
+
     <string name="country_spinner">Choose a country</string>
 
     <string-array name="country_arrays">

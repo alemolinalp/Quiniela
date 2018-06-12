@@ -28,11 +28,7 @@
 
     </item>
 
-    <item android:id="@+id/equipos"
-        android:title="Mi equipo"
-        android:icon="@drawable/bola">
 
-    </item>
 
     <item android:id="@+id/infoRus"
         android:title="Información Rusia"

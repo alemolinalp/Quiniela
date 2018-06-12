@@ -52,7 +52,7 @@
                 android:background="@drawable/letras"
                 android:drawableLeft="@drawable/usuario"
                 android:fontFamily="sans-serif"
-                android:hint="Usuario"
+                android:hint="Correo"
                 android:inputType="textPersonName"
                 android:paddingLeft="5dp"
                 android:textColor="@android:color/background_light"

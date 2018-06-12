@@ -8,8 +8,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RadioButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import com.android.volley.AuthFailureError;
@@ -43,6 +45,7 @@ public class CalendarioFragment extends Fragment {
     String id="";
     SharedPreferences sharedPreferences;
     RadioButton lugar,goles;
+    Spinner s;
 
 
     public CalendarioFragment() {
@@ -59,6 +62,19 @@ public class CalendarioFragment extends Fragment {
         lv= v.findViewById(R.id.listCalendario);
         lugar=v.findViewById(R.id.radioLugar);
         goles=v.findViewById(R.id.radioGoles);
+        s=v.findViewById(R.id.spinnergrupos);
+
+        s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                adapter.filtrarGrupos(i+1);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
 
         lugar.setOnClickListener(new View.OnClickListener() {
             @Override

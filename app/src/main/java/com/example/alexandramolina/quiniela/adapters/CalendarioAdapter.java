@@ -93,6 +93,62 @@ public class CalendarioAdapter extends BaseAdapter {
 
     }
 
+    public void filtrarGrupos(int grupo){
+        ArrayList<Partido> filtrado= new ArrayList<Partido>();
+
+
+
+            for(Partido p: temporal){
+                if (grupo==1){
+                    if(p.getIdEquipo1()>=1 && p.getIdEquipo1()<=4 ){
+                        filtrado.add(p);
+                    }
+                }
+                else if (grupo==2){
+                    if(p.getIdEquipo1()>=5 && p.getIdEquipo1()<=8 ){
+                        filtrado.add(p);
+                    }
+                }
+                else if (grupo==3){
+                    if(p.getIdEquipo1()>=9 && p.getIdEquipo1()<=12 ){
+                        filtrado.add(p);
+                    }
+                }
+                else if (grupo==4){
+                    if(p.getIdEquipo1()>=13 && p.getIdEquipo1()<=16 ){
+                        filtrado.add(p);
+                    }
+                }
+                else if (grupo==5){
+                    if(p.getIdEquipo1()>=17 && p.getIdEquipo1()<=20 ){
+                        filtrado.add(p);
+                    }
+                }
+                else if (grupo==6){
+                    if(p.getIdEquipo1()>=21 && p.getIdEquipo1()<=24 ){
+                        filtrado.add(p);
+                    }
+                }
+                else if (grupo==7){
+                    if(p.getIdEquipo1()>=25 && p.getIdEquipo1()<=28 ){
+                        filtrado.add(p);
+                    }
+                }
+                else if (grupo==8){
+                    if(p.getIdEquipo1()>=29 && p.getIdEquipo1()<=32 ){
+                        filtrado.add(p);
+                    }
+                }
+
+                arrayList=filtrado;
+                notifyDataSetChanged();
+            }
+
+
+
+
+    }
+
     @Override
     public View getView(final int i, View view, ViewGroup viewGroup) {
         final CalendarioAdapter.ViewHolder viewHolder;

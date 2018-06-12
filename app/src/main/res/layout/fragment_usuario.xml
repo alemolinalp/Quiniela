@@ -18,9 +18,10 @@
             <ImageView
                 android:layout_marginTop="20dp"
                 android:id="@+id/foto"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:src="@drawable/col"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/usericon"
                 android:clickable="true"/>
 
             <TextView
@@ -42,22 +43,7 @@
                 android:textSize="14sp"
                 android:text="Correo electrónico: alemolina@gmail.com" />
 
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:entries="@array/country_arrays"
-                android:layout_marginTop="30dp"
-                android:prompt="@string/country_spinner"/>
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:background="#50000000"
-                android:textColor="@color/white"
-                android:text="Cambiar País" />
         </LinearLayout>
     </RelativeLayout>
 
