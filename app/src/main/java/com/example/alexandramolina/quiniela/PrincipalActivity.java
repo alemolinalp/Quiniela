@@ -91,7 +91,9 @@ public class PrincipalActivity extends AppCompatActivity implements NavigationVi
             case R.id.infoRus:
                 fm.beginTransaction().replace(R.id.container,new InfoRusiaFragment()).commit();
                 break;
-
+            case R.id.calendario:
+                fm.beginTransaction().replace(R.id.container,new CalendarioFragment()).commit();
+                break;
         }
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return false;
